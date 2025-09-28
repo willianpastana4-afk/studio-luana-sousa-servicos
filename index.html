@@ -25,15 +25,13 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
         }
-        /* Estilo para elementos editáveis (clicar e digitar) */
+        /* Remove o cursor de edição (mouse padrão) */
         [contenteditable="true"] {
-            cursor: text;
-            padding: 2px 4px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
+            cursor: default !important;
         }
+        /* Desativa a função de passar o mouse */
         [contenteditable="true"]:hover {
-            background-color: #ffe4e6; /* Rosa muito claro ao passar o mouse */
+            background-color: transparent !important;
         }
     </style>
 </head>
@@ -42,26 +40,25 @@
 
         <!-- Título Principal -->
         <header class="text-center mb-6">
-            <h1 class="script-title text-gray-800 leading-none" contenteditable="true" data-key="studio_name">
+            <h1 class="script-title text-gray-800 leading-none">
                 Studio Luana Sousa
             </h1>
-            <h2 class="text-xl font-light text-gray-700 mt-2" contenteditable="true" data-key="table_subtitle">
+            <h2 class="text-xl font-light text-gray-700 mt-2">
                 Serviços e Valores
             </h2>
             <hr class="mt-4 border-t-2 border-pink-100 w-1/3 mx-auto">
         </header>
 
-        <!-- Botão de Agendamento WhatsApp -->
+        <!-- Botão de Agendamento WhatsApp (Link finalizado e estático) -->
         <div class="mb-6">
-            <!-- O JS configura o link com o número e a mensagem automática -->
-            <a id="whatsapp-link" href="#" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg text-white bg-pink-600 hover:bg-pink-700 transition duration-150 ease-in-out transform hover:scale-[1.02]">
+            <a href="https://wa.me/5591992820186?text=Ol%C3%A1%2C%20Studio%20Luana%20Sousa%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20e%20saber%20mais%20sobre%20os%20servi%C3%A7os.%20Vi%20a%20tabela%20de%20valores%20online." target="_blank" class="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg text-white bg-pink-600 hover:bg-pink-700 transition duration-150 ease-in-out transform hover:scale-[1.02]">
                 📞 Agendar no WhatsApp
             </a>
         </div>
 
         <!-- Seção 1: Extensão de Cílios (Fio a Fio e Volumes) -->
         <section class="mb-6">
-            <div class="pink-highlight text-center font-semibold p-2 mb-4 tracking-wider" contenteditable="true" data-key="section_title_extensao">
+            <div class="pink-highlight text-center font-semibold p-2 mb-4 tracking-wider">
                 Extensão de cílios
             </div>
 
@@ -70,64 +67,64 @@
                 <!-- Cílios Fio a Fio -->
                 <div class="pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-center mb-1">
-                        <span class="text-gray-700 font-medium text-lg" contenteditable="true" data-key="service_name_1">Cílios Fio a Fio</span>
-                        <span class="font-bold text-gray-800 text-lg" contenteditable="true" data-key="service_price_1">R$ 120,00</span>
+                        <span class="text-gray-700 font-medium text-lg">Cílios Fio a Fio</span>
+                        <span class="font-bold text-gray-800 text-lg">R$ 120,00</span>
                     </div>
-                    <p class="text-gray-500 text-sm italic mb-2" contenteditable="true" data-key="service_desc_1">Beleza clássica e natural que realça seu olhar de forma sutil.</p>
+                    
                     <div class="flex justify-between items-center pl-4 mt-1">
                         <div class="flex items-center">
-                            <span class="text-gray-500 font-light italic text-sm" contenteditable="true" data-key="maintenance_label_1">Manutenção</span>
-                            <span class="font-bold text-gray-800 text-sm ml-2" contenteditable="true" data-key="maintenance_price_1">R$ 70,00</span>
+                            <span class="text-gray-500 font-light italic text-sm">Manutenção</span>
+                            <span class="font-bold text-gray-800 text-sm ml-2">R$ 70,00</span>
                         </div>
-                        <span class="font-semibold text-gray-700 text-sm" contenteditable="true" data-key="maintenance_value_1">a cada 15 dias</span>
+                        <span class="font-semibold text-gray-700 text-sm">a cada 15 dias</span>
                     </div>
                 </div>
 
                 <!-- Cílios Volume Brasileiro fio Y -->
                 <div class="pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-center mb-1">
-                        <span class="text-gray-700 font-medium text-lg" contenteditable="true" data-key="service_name_2">Cílios Volume Brasileiro fio Y</span>
-                        <span class="font-bold text-gray-800 text-lg" contenteditable="true" data-key="service_price_2">R$ 140,00</span>
+                        <span class="text-gray-700 font-medium text-lg">Cílios Volume Brasileiro fio Y</span>
+                        <span class="font-bold text-gray-800 text-lg">R$ 140,00</span>
                     </div>
-                    <p class="text-gray-500 text-sm italic mb-2" contenteditable="true" data-key="service_desc_2">Volume leve e efeito 'esfumado' com fios em formato Y.</p>
+                    
                     <div class="flex justify-between items-center pl-4 mt-1">
                         <div class="flex items-center">
-                            <span class="text-gray-500 font-light italic text-sm" contenteditable="true" data-key="maintenance_label_2">Manutenção</span>
-                            <span class="font-bold text-gray-800 text-sm ml-2" contenteditable="true" data-key="maintenance_price_2">R$ 80,00</span>
+                            <span class="text-gray-500 font-light italic text-sm">Manutenção</span>
+                            <span class="font-bold text-gray-800 text-sm ml-2">R$ 80,00</span>
                         </div>
-                        <span class="font-semibold text-gray-700 text-sm" contenteditable="true" data-key="maintenance_value_2">a cada 15 dias</span>
+                        <span class="font-semibold text-gray-700 text-sm">a cada 15 dias</span>
                     </div>
                 </div>
 
                 <!-- Cílios Volume Egípcio -->
                 <div class="pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-center mb-1">
-                        <span class="text-gray-700 font-medium text-lg" contenteditable="true" data-key="service_name_3">Cílios Volume Egípcio</span>
-                        <span class="font-bold text-gray-800 text-lg" contenteditable="true" data-key="service_price_3">R$ 150,00</span>
+                        <span class="text-gray-700 font-medium text-lg">Cílios Volume Egípcio</span>
+                        <span class="font-bold text-gray-800 text-lg">R$ 150,00</span>
                     </div>
-                    <p class="text-gray-500 text-sm italic mb-2" contenteditable="true" data-key="service_desc_3">Aplicações que criam um olhar dramático e marcante.</p>
+                    
                     <div class="flex justify-between items-center pl-4 mt-1">
                         <div class="flex items-center">
-                            <span class="text-gray-500 font-light italic text-sm" contenteditable="true" data-key="maintenance_label_3">Manutenção</span>
-                            <span class="font-bold text-gray-800 text-sm ml-2" contenteditable="true" data-key="maintenance_price_3">R$ 90,00</span>
+                            <span class="text-gray-500 font-light italic text-sm">Manutenção</span>
+                            <span class="font-bold text-gray-800 text-sm ml-2">R$ 90,00</span>
                         </div>
-                        <span class="font-semibold text-gray-700 text-sm" contenteditable="true" data-key="maintenance_value_3">a cada 15 dias</span>
+                        <span class="font-semibold text-gray-700 text-sm">a cada 15 dias</span>
                     </div>
                 </div>
 
                 <!-- Cílios Volume 5D -->
                 <div class="pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-center mb-1">
-                        <span class="text-gray-700 font-medium text-lg" contenteditable="true" data-key="service_name_4">Cílios Volume 5D</span>
-                        <span class="font-bold text-gray-800 text-lg" contenteditable="true" data-key="service_price_4">R$ 180,00</span>
+                        <span class="text-gray-700 font-medium text-lg">Cílios Volume 5D</span>
+                        <span class="font-bold text-gray-800 text-lg">R$ 180,00</span>
                     </div>
-                    <p class="text-gray-500 text-sm italic mb-2" contenteditable="true" data-key="service_desc_4">O máximo de volume para um efeito de cílios postiços.</p>
+                    
                     <div class="flex justify-between items-center pl-4 mt-1">
                         <div class="flex items-center">
-                            <span class="text-gray-500 font-light italic text-sm" contenteditable="true" data-key="maintenance_label_4">Manutenção</span>
-                            <span class="font-bold text-gray-800 text-sm ml-2" contenteditable="true" data-key="maintenance_price_4">R$ 100,00</span>
+                            <span class="text-gray-500 font-light italic text-sm">Manutenção</span>
+                            <span class="font-bold text-gray-800 text-sm ml-2">R$ 100,00</span>
                         </div>
-                        <span class="font-semibold text-gray-700 text-sm" contenteditable="true" data-key="maintenance_value_4">a cada 15 dias</span>
+                        <span class="font-semibold text-gray-700 text-sm">a cada 15 dias</span>
                     </div>
                 </div>
             </div>
@@ -135,7 +132,7 @@
 
         <!-- Seção 2: Cílios Tufos -->
         <section class="mb-6">
-            <div class="pink-highlight text-center font-semibold p-2 mb-4 tracking-wider mt-6" contenteditable="true" data-key="section_title_tufos">
+            <div class="pink-highlight text-center font-semibold p-2 mb-4 tracking-wider mt-6">
                 Cílios Tufos
             </div>
 
@@ -144,45 +141,45 @@
                 <!-- Cílios tufos de seda natural -->
                 <div class="pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-center mb-1">
-                        <span class="text-gray-700 font-medium" contenteditable="true" data-key="service_name_5">Cílios tufos de seda natural</span>
-                        <span class="font-bold text-gray-800" contenteditable="true" data-key="service_price_5">R$ 35,00</span>
+                        <span class="text-gray-700 font-medium">Cílios tufos de seda natural</span>
+                        <span class="font-bold text-gray-800">R$ 35,00</span>
                     </div>
                     <div class="flex justify-between items-center pl-4 mt-1">
                         <div class="flex items-center">
-                            <span class="text-gray-500 font-light italic text-sm" contenteditable="true" data-key="maintenance_label_5">Manutenção</span>
-                            <span class="font-bold text-gray-800 text-sm ml-2" contenteditable="true" data-key="maintenance_price_5">R$ 20,00</span>
+                            <span class="text-gray-500 font-light italic text-sm">Manutenção</span>
+                            <span class="font-bold text-gray-800 text-sm ml-2">R$ 20,00</span>
                         </div>
-                        <span class="font-semibold text-gray-700 text-sm" contenteditable="true" data-key="maintenance_value_5">a cada 7 dias</span>
+                        <span class="font-semibold text-gray-700 text-sm">a cada 7 dias</span>
                     </div>
                 </div>
                 
                 <!-- Cílios Tufos de Seda Volume -->
                 <div class="pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-center mb-1">
-                        <span class="text-gray-700 font-medium" contenteditable="true" data-key="service_name_6">Cílios Tufos de Seda Volume</span>
-                        <span class="font-bold text-gray-800" contenteditable="true" data-key="service_price_6">R$ 45,00</span>
+                        <span class="text-gray-700 font-medium">Cílios Tufos de Seda Volume</span>
+                        <span class="font-bold text-gray-800">R$ 45,00</span>
                     </div>
                     <div class="flex justify-between items-center pl-4 mt-1">
                         <div class="flex items-center">
-                            <span class="text-gray-500 font-light italic text-sm" contenteditable="true" data-key="maintenance_label_6">Manutenção</span>
-                            <span class="font-bold text-gray-800 text-sm ml-2" contenteditable="true" data-key="maintenance_price_6">R$ 25,00</span>
+                            <span class="text-gray-500 font-light italic text-sm">Manutenção</span>
+                            <span class="font-bold text-gray-800 text-sm ml-2">R$ 25,00</span>
                         </div>
-                        <span class="font-semibold text-gray-700 text-sm" contenteditable="true" data-key="maintenance_value_6">a cada 7 dias</span>
+                        <span class="font-semibold text-gray-700 text-sm">a cada 7 dias</span>
                     </div>
                 </div>
 
                 <!-- Cílios Tufos de Seda Mega Volume -->
                 <div class="pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-center mb-1">
-                        <span class="text-gray-700 font-medium" contenteditable="true" data-key="service_name_7">Cílios Tufos de Seda Mega Volume</span>
-                        <span class="font-bold text-gray-800" contenteditable="true" data-key="service_price_7">R$ 55,00</span>
+                        <span class="text-gray-700 font-medium">Cílios Tufos de Seda Mega Volume</span>
+                        <span class="font-bold text-gray-800">R$ 55,00</span>
                     </div>
                     <div class="flex justify-between items-center pl-4 mt-1">
                         <div class="flex items-center">
-                            <span class="text-gray-500 font-light italic text-sm" contenteditable="true" data-key="maintenance_label_7">Manutenção</span>
-                            <span class="font-bold text-gray-800 text-sm ml-2" contenteditable="true" data-key="maintenance_price_7">R$ 30,00</span>
+                            <span class="text-gray-500 font-light italic text-sm">Manutenção</span>
+                            <span class="font-bold text-gray-800 text-sm ml-2">R$ 30,00</span>
                         </div>
-                        <span class="font-semibold text-gray-700 text-sm" contenteditable="true" data-key="maintenance_value_7">a cada 7 dias</span>
+                        <span class="font-semibold text-gray-700 text-sm">a cada 7 dias</span>
                     </div>
                 </div>
             </div>
@@ -191,7 +188,7 @@
 
         <!-- Seção 3: Sobrancelhas -->
         <section class="mb-8">
-            <div class="pink-highlight text-center font-semibold p-2 mb-4 tracking-wider mt-6" contenteditable="true" data-key="section_title_sobrancelhas">
+            <div class="pink-highlight text-center font-semibold p-2 mb-4 tracking-wider mt-6">
                 Sobrancelhas
             </div>
 
@@ -199,44 +196,40 @@
                 <!-- Item: Limpeza de Sobrancelha -->
                 <div class="flex justify-between items-center pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-start w-full">
-                        <span class="text-gray-700 font-medium" contenteditable="true" data-key="service_name_8">Limpeza de Sobrancelha</span>
-                        <span class="font-bold text-gray-800" contenteditable="true" data-key="service_price_8">R$ 15,00</span>
+                        <span class="text-gray-700 font-medium">Limpeza de Sobrancelha</span>
+                        <span class="font-bold text-gray-800">R$ 15,00</span>
                     </div>
-                    <p class="text-gray-500 text-sm italic mt-1" contenteditable="true" data-key="service_desc_8">Remoção de excesso e definição da forma natural.</p>
                 </div>
 
                 <!-- Item: Sobrancelha Henna -->
                 <div class="flex justify-between items-center pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-start w-full">
-                        <span class="text-gray-700 font-medium" contenteditable="true" data-key="service_name_9">Sobrancelha Henna</span>
-                        <span class="font-bold text-gray-800" contenteditable="true" data-key="service_price_9">R$ 25,00</span>
+                        <span class="text-gray-700 font-medium">Sobrancelha Henna</span>
+                        <span class="font-bold text-gray-800">R$ 25,00</span>
                     </div>
-                    <p class="text-gray-500 text-sm italic mt-1" contenteditable="true" data-key="service_desc_9">Preenchimento temporário para maior definição e volume.</p>
                 </div>
 
                 <!-- Item: Brow Lamination -->
                 <div class="flex justify-between items-center pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-start w-full">
-                        <span class="text-gray-700 font-medium" contenteditable="true" data-key="service_name_10">Brow Lamination</span>
-                        <span class="font-bold text-gray-800" contenteditable="true" data-key="service_price_10">R$ 100,00</span>
+                        <span class="text-gray-700 font-medium">Brow Lamination</span>
+                        <span class="font-bold text-gray-800">R$ 100,00</span>
                     </div>
-                    <p class="text-gray-500 text-sm italic mt-1" contenteditable="true" data-key="service_desc_10">Alinhamento semi-permanente dos fios para um visual mais cheio e 'wild'.</p>
                 </div>
                 
                 <!-- Item: Brow Lamination + Henna -->
                 <div class="flex justify-between items-center pb-4 border-b border-gray-200">
                     <div class="flex justify-between items-start w-full">
-                        <span class="text-gray-700 font-medium" contenteditable="true" data-key="service_name_11">Brow Lamination + Henna</span>
-                        <span class="font-bold text-gray-800" contenteditable="true" data-key="service_price_11">R$ 125,00</span>
+                        <span class="text-gray-700 font-medium">Brow Lamination + Henna</span>
+                        <span class="font-bold text-gray-800">R$ 115,00</span>
                     </div>
-                    <p class="text-gray-500 text-sm italic mt-1" contenteditable="true" data-key="service_desc_11">Combinação de alinhamento e coloração para o resultado mais completo.</p>
                 </div>
             </div>
         </section>
 
         <!-- Seção 4: Depilação Facial -->
         <section class="mb-8">
-            <div class="pink-highlight text-center font-semibold p-2 mb-4 tracking-wider mt-6" contenteditable="true" data-key="section_title_buco">
+            <div class="pink-highlight text-center font-semibold p-2 mb-4 tracking-wider mt-6">
                 Depilação Facial
             </div>
 
@@ -244,8 +237,8 @@
                 <!-- Item: Retirada de Buço -->
                 <div class="flex justify-between items-center pb-2 border-b border-gray-200">
                     <div class="flex justify-between items-start w-full">
-                        <span class="text-gray-700 font-medium" contenteditable="true" data-key="service_name_12">Retirada de Buço (Cera/Linha)</span>
-                        <span class="font-bold text-gray-800" contenteditable="true" data-key="service_price_12">R$ 20,00</span>
+                        <span class="text-gray-700 font-medium">Retirada de Buço (Cera/Linha)</span>
+                        <span class="font-bold text-gray-800">R$ 20,00</span>
                     </div>
                 </div>
             </div>
@@ -264,79 +257,27 @@
 
             <div class="flex items-center">
                 <span class="text-pink-600 mr-2">📍</span>
-                <span contenteditable="true" data-key="address">Novo Horizonte - rua dos Madereiros</span>
+                <span>Novo Horizonte - rua dos Madereiros</span>
             </div>
 
             <div class="flex items-center">
                 <span class="text-pink-600 mr-2">📞</span>
-                <span contenteditable="true" data-key="phone">(91) 99282-0186</span>
+                <span>(91) 99282-0186</span>
             </div>
 
             <div class="flex items-center">
                 <span class="text-pink-600 mr-2">⏰</span>
-                <span contenteditable="true" data-key="schedule">Atendimento com Hora marcada</span>
+                <span>Atendimento com Hora marcada</span>
             </div>
 
             <div class="flex items-center">
                 <span class="text-pink-600 mr-2">📸</span>
-                <span class="font-bold" contenteditable="true" data-key="instagram">@luanasousastudio</span>
+                <span class="font-bold">@luanasousastudio</span>
             </div>
             
         </footer>
 
     </div>
-
-    <script>
-        const editableElements = document.querySelectorAll('[contenteditable="true"]');
-        const storagePrefix = 'luana_sousa_table_';
-
-        // 1. Carrega dados salvos
-        function loadContent() {
-            editableElements.forEach(element => {
-                const key = element.getAttribute('data-key');
-                const savedContent = localStorage.getItem(storagePrefix + key);
-                // Carrega o conteúdo salvo pelo usuário, se existir
-                if (savedContent !== null) {
-                    element.innerHTML = savedContent;
-                }
-            });
-            const infoMsg = document.getElementById('info-message');
-            if (infoMsg) infoMsg.style.display = 'none';
-
-        }
-
-        // 2. Salva o conteúdo no armazenamento local
-        function saveContent(event) {
-            const element = event.target;
-            const key = element.getAttribute('data-key');
-            localStorage.setItem(storagePrefix + key, element.innerHTML.trim());
-        }
-
-        // 3. Configura os listeners de edição
-        function setupEditing() {
-            editableElements.forEach(element => {
-                element.addEventListener('blur', saveContent);
-            });
-        }
-        
-        // 4. Configura o link do WhatsApp com o número atual e mensagem automática
-        function setupWhatsAppLink() {
-            const phoneElement = document.querySelector('[data-key="phone"]');
-            const whatsappLink = document.getElementById('whatsapp-link');
-            if (phoneElement && whatsappLink) {
-                const rawNumber = phoneElement.innerHTML.replace(/\D/g, '');
-                // Mensagem automática para o WhatsApp
-                const defaultMessage = encodeURIComponent("Olá, Studio Luana Sousa! Gostaria de agendar um horário e saber mais sobre os serviços. Vi a tabela de valores online.");
-                whatsappLink.href = `https://wa.me/55${rawNumber}?text=${defaultMessage}`;
-            }
-        }
-
-        // 5. Inicializa o carregamento e a edição
-        window.onload = function() {
-            loadContent();
-            setupEditing();
-            setupWhatsAppLink(); 
-        };
-    </script>
 </body>
 </html>
+
